@@ -1,0 +1,26 @@
+:root{
+	--bg: #0f1724;
+	--card: #111827;
+	--accent: #06b6d4;
+	--muted: #94a3b8;
+	--text: #e6eef6;
+}
+*{box-sizing:border-box}
+body{
+	margin:0; font-family:Inter,Segoe UI,Roboto,Arial,sans-serif; background:linear-gradient(180deg,#061021 0%, #071229 100%); color:var(--text); min-height:100vh; display:flex; align-items:center; justify-content:center;
+}
+.container{width:min(900px,92%); background:rgba(255,255,255,0.02); padding:28px; border-radius:12px; box-shadow:0 6px 30px rgba(2,6,23,0.6)}
+h1{margin:0 0 16px;font-size:20px}
+.controls{display:flex;gap:12px;align-items:center;margin-bottom:18px}
+#fileInput{flex:1}
+.player{display:flex;align-items:center;gap:8px}
+.player button{background:transparent;border:1px solid rgba(255,255,255,0.06);color:var(--text);padding:8px 10px;border-radius:8px;cursor:pointer}
+.player button:hover{border-color:var(--accent)}
+.progress-wrap{display:flex;flex-direction:column;align-items:flex-end;gap:6px}
+#progress{width:320px}
+#time{font-size:12px;color:var(--muted)}
+.track-list{list-style:none;padding:0;margin:0;max-height:300px;overflow:auto;border-top:1px dashed rgba(255,255,255,0.03)}
+.track-list li{padding:10px 12px;border-bottom:1px dashed rgba(255,255,255,0.02);display:flex;justify-content:space-between;align-items:center}
+.track-list li.playing{background:linear-gradient(90deg, rgba(6,182,212,0.06), transparent)}
+.track-title{font-size:14px}
+.track-actions button{background:transparent;border:0;color:var(--muted);cursor:pointer}
