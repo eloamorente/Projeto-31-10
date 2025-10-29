@@ -1,0 +1,12 @@
+{
+  "name": "projeto-31-10",
+  "version": "1.0.0",
+  "description": "Player simples - utilitário para preencher links Spotify",
+  "type": "module",
+  "scripts": {
+    "fetch-spotify": "node ./scripts/fetch_spotify_links.js"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}

@@ -3,31 +3,32 @@
 	<head>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width,initial-scale=1" />
-		<title>Player Simples</title>
+		<title>Playlists — Projeto</title>
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
 		<link rel="stylesheet" href="style.css">
 	</head>
 	<body>
 		<main class="container">
-			<h1>Player de Músicas</h1>
-
-			<section class="controls">
-				<input id="fileInput" type="file" accept="audio/*" multiple />
-				<div class="player">
-					<button id="prevBtn" title="Anterior">⏮</button>
-					<button id="playBtn" title="Play/Pause">▶️</button>
-					<button id="nextBtn" title="Próxima">⏭</button>
-					<div class="progress-wrap">
-						<input id="progress" type="range" min="0" max="100" value="0">
-						<div id="time">00:00 / 00:00</div>
-					</div>
+			<header class="brand">
+				<div class="logo">🎵</div>
+				<div>
+					<h1>Minhas Playlists</h1>
+					<p class="subtitle">Coleções organizadas — clique no card para abrir no Spotify</p>
 				</div>
-			</section>
+			</header>
 
-			<section>
-				<ul id="trackList" class="track-list"></ul>
-			</section>
+					<section>
+						<ul id="trackList" class="track-list"></ul>
+					</section>
 
-			<audio id="audio" preload="metadata"></audio>
+					<section class="music-section">
+						<h2>Playlists especiais para vôce</h2>
+						<div id="lista-de-musicas" class="lista-de-musicas"></div>
+					</section>
+
+			<!-- sem player: apenas lista de playlists -->
 		</main>
 
 		<script src="app.js"></script>

@@ -1,26 +1,56 @@
 :root{
-	--bg: #0f1724;
-	--card: #111827;
-	--accent: #06b6d4;
-	--muted: #94a3b8;
+	--bg: #e7c2ec;
+	--card: #80407c;
+	--accent: #1db954; /* Spotify green for accents */
+	--muted: #d09adb;
 	--text: #e6eef6;
+	--glass: rgba(235, 175, 215, 0.767);
 }
 *{box-sizing:border-box}
 body{
-	margin:0; font-family:Inter,Segoe UI,Roboto,Arial,sans-serif; background:linear-gradient(180deg,#061021 0%, #071229 100%); color:var(--text); min-height:100vh; display:flex; align-items:center; justify-content:center;
+	margin:0; font-family:Inter,system-ui,Segoe UI,Roboto,Arial,sans-serif; background:linear-gradient(180deg,#88498a 0%, #071229 100%); color:var(--text); min-height:100vh; display:flex; align-items:flex-start; justify-content:center; padding:36px 0;
 }
-.container{width:min(900px,92%); background:rgba(255,255,255,0.02); padding:28px; border-radius:12px; box-shadow:0 6px 30px rgba(2,6,23,0.6)}
-h1{margin:0 0 16px;font-size:20px}
-.controls{display:flex;gap:12px;align-items:center;margin-bottom:18px}
-#fileInput{flex:1}
-.player{display:flex;align-items:center;gap:8px}
-.player button{background:transparent;border:1px solid rgba(255,255,255,0.06);color:var(--text);padding:8px 10px;border-radius:8px;cursor:pointer}
-.player button:hover{border-color:var(--accent)}
-.progress-wrap{display:flex;flex-direction:column;align-items:flex-end;gap:6px}
-#progress{width:320px}
-#time{font-size:12px;color:var(--muted)}
-.track-list{list-style:none;padding:0;margin:0;max-height:300px;overflow:auto;border-top:1px dashed rgba(255,255,255,0.03)}
-.track-list li{padding:10px 12px;border-bottom:1px dashed rgba(255,255,255,0.02);display:flex;justify-content:space-between;align-items:center}
-.track-list li.playing{background:linear-gradient(90deg, rgba(6,182,212,0.06), transparent)}
-.track-title{font-size:14px}
-.track-actions button{background:transparent;border:0;color:var(--muted);cursor:pointer}
+.container{width:min(1100px,94%); background:linear-gradient(180deg, rgba(187, 96, 199, 0.829), rgba(255, 194, 250, 0.733)); padding:30px; border-radius:14px; box-shadow:0 10px 40px rgba(2,6,23,0.7); border:1px solid var(--glass)}
+.brand{display:flex;gap:14px;align-items:center;margin-bottom:18px}
+.brand .logo{width:56px;height:56px;border-radius:12px;background:linear-gradient(135deg,var(--accent),#14c76b);display:flex;align-items:center;justify-content:center;font-size:26px;box-shadow:0 6px 18px rgba(1,10,6,0.5)}
+.brand h1{margin:0;font-size:20px}
+.brand h1{font-size:22px;letter-spacing:0.2px}
+.subtitle{margin:6px 0 0;color:var(--muted);font-size:13px}
+
+/* visual separator between playlist sections */
+.playlist-section{margin:28px 0;padding-top:16px;border-top:1px solid rgba(255,255,255,0.03)}
+.playlist-section h3{margin:0 0 12px;font-size:16px;color:var(--text);display:flex;align-items:center;gap:10px}
+.playlist-section h3::before{content:'';display:inline-block;width:8px;height:8px;background:linear-gradient(135deg,var(--accent),#14c76b);border-radius:50%}
+
+.controls{margin-bottom:6px;color:var(--muted)}
+
+/* Copilot: uso de um card flexível para alinhar imagem e texto */
+.musica-card{display:flex;gap:12px;align-items:center;background:rgba(255,255,255,0.02);padding:12px;border-radius:10px;margin-bottom:10px}
+.musica-card{display:flex;flex-direction:column;gap:12px;align-items:flex-start;background:linear-gradient(180deg, rgba(255,255,255,0.01), rgba(255,255,255,0.007));padding:12px;border-radius:12px;margin-bottom:10px;box-shadow:0 6px 18px rgba(2,6,23,0.45);border:1px solid rgba(255,255,255,0.02);transition:transform .12s ease,box-shadow .12s ease}
+.musica-card:hover{transform:translateY(-6px);box-shadow:0 14px 34px rgba(2,6,23,0.6)}
+.musica-card img{width:100%;height:160px;object-fit:cover;border-radius:8px;flex-shrink:0}
+.musica-info{display:flex;flex-direction:column}
+.musica-titulo{font-weight:700;font-size:15px;margin-top:6px}
+.musica-artista{font-size:13px;color:var(--muted);margin-top:4px}
+
+/* Copilot: uso da tag <section> para separar blocos semântico — facilita leitura e acessibilidade */
+.lista-de-musicas{margin-top:12px}
+.spotify-btn{margin-left:auto;background:var(--accent);color:#07210b;padding:8px 12px;border-radius:999px;text-decoration:none;font-weight:700;display:inline-flex;align-items:center;gap:8px}
+.spotify-btn svg{filter:brightness(0) invert(1);opacity:0.95}
+.spotify-btn:hover{transform:translateY(-2px)}
+
+.playlist-section{margin:22px 0}
+.playlist-section h3{margin:0 0 10px;font-size:16px}
+.playlist-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:16px}
+
+.musica-card .spotify-btn{margin-top:10px}
+.musica-card .overlay-play{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;opacity:0;transition:opacity .12s}
+.card-wrap{position:relative}
+.musica-card:hover .overlay-play{opacity:1}
+
+@media (max-width:920px){
+	.playlist-grid{grid-template-columns:repeat(2,1fr)}
+}
+@media (max-width:600px){
+	.playlist-grid{grid-template-columns:repeat(1,1fr)}
+}
