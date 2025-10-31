@@ -34,7 +34,21 @@ function renderMusicas(){
 			const wrap = document.createElement('div'); wrap.className = 'card-wrap';
 			const card = document.createElement('div');
 			card.className = 'musica-card';
-			const img = document.createElement('img'); img.src = m.capaUrl; img.alt = m.titulo;
+			const img = document.createElement('img');
+			img.alt = m.titulo;
+			// inicialmente usa a capa fornecida no objeto (ou placeholder)
+			img.src = m.capaUrl || 'https://picsum.photos/200/200';
+			// se houver link do Spotify, tenta obter a capa oficial via oEmbed (thumbnail_url)
+			if(m.spotifyUrl){
+				fetch('https://open.spotify.com/oembed?url=' + encodeURIComponent(m.spotifyUrl))
+					.then(resp => { if(!resp.ok) throw new Error('oEmbed fetch failed'); return resp.json(); })
+					.then(data => {
+						if(data && data.thumbnail_url) img.src = data.thumbnail_url;
+					})
+					.catch(()=>{
+						// falha ao obter capa oficial: mantém a capa existente
+					});
+			}
 			const info = document.createElement('div'); info.className = 'musica-info';
 			const t = document.createElement('div'); t.className = 'musica-titulo'; t.textContent = m.titulo;
 			const a = document.createElement('div'); a.className = 'musica-artista'; a.textContent = m.artista;
