@@ -27,12 +27,12 @@ const playlists = {
 		{ titulo: 'A Última Volta', artista: '', capaUrl: 'https://picsum.photos/seed/churrasco_ultimavolta/200/200', spotifyUrl: 'https://open.spotify.com/search/A%20Ultima%20Volta' }
 	],
 	'Sextou': [
-		{ titulo: 'Pantera', artista: 'MC Jota Vila', capaUrl: 'https://picsum.photos/seed/sextou1/200/200', spotifyUrl: 'https://open.spotify.com/search/Pantera' },
-		{ titulo: 'Valentino', artista: 'MC Willian', capaUrl: 'https://picsum.photos/seed/sextou2/200/200', spotifyUrl: 'https://open.spotify.com/search/Valenti' },
-		{ titulo: 'Marmita de Blogueira', artista: 'Caio Passos', capaUrl: 'https://picsum.photos/seed/sextou3/200/200', spotifyUrl: 'https://open.spotify.com/search/Marmita%20de%20Blogueira' },
-		{ titulo: 'Posso Até Não Te Dar Flores', artista: '', capaUrl: 'https://picsum.photos/seed/sextou4/200/200', spotifyUrl: 'https://open.spotify.com/search/Posso%20Ate%20Nao%20Te%20Dar%20Flores' },
-		{ titulo: 'Mano Pepa', artista: 'DJ Emige', capaUrl: 'https://picsum.photos/seed/sextou5/200/200', spotifyUrl: 'https://open.spotify.com/search/Mano%20Pepa' },
-		{ titulo: 'Peito PP', artista: 'MC Rodrigo do CN', capaUrl: 'https://picsum.photos/seed/sextou6/200/200', spotifyUrl: 'https://open.spotify.com/search/Peito%20PP' }
+		{ titulo: 'Pantera', artista: 'MC JVilla', capaUrl: 'https://picsum.photos/seed/sextou1/200/200', spotifyUrl: 'https://open.spotify.com/intl-pt/track/6xgf2Nigvj0JuyNFFDAG7t' },
+		{ titulo: 'Valentino', artista: 'MC Willian', capaUrl: 'https://picsum.photos/seed/sextou2/200/200', spotifyUrl: 'https://open.spotify.com/intl-pt/track/6OPfBo0J6yqzSY9WxNlbA5' },
+		{ titulo: 'Marmita de Blogueira', artista: 'Caio Passos', capaUrl: 'https://picsum.photos/seed/sextou3/200/200', spotifyUrl: 'https://open.spotify.com/intl-pt/track/6TFne3kuZiI7kfSVCx1OFg' },
+		{ titulo: 'Posso Até Não Te Dar Flores', artista: 'DJ Japa NK', capaUrl: 'https://picsum.photos/seed/sextou4/200/200', spotifyUrl: 'https://open.spotify.com/intl-pt/track/4G7bbgD2DHORU4frrWoCXp' },
+		{ titulo: 'Mano Pepa', artista: 'DJ Emige', capaUrl: 'https://picsum.photos/seed/sextou5/200/200', spotifyUrl: 'https://open.spotify.com/intl-pt/track/1x1fQBB6uDMmxYlUXVYSG8' },
+		{ titulo: 'Peito PP', artista: 'MC Rodrigo do CN', capaUrl: 'https://picsum.photos/seed/sextou6/200/200', spotifyUrl: 'https://open.spotify.com/intl-pt/track/1Ir97ohTmJmYhWcjmAg99s' }
 	],
 	'Para chorar': [
 		{ titulo: 'Party Girl', artista: 'Unknown', capaUrl: 'https://picsum.photos/seed/31/200/200', spotifyUrl: 'https://open.spotify.com/intl-pt/track/5RqR4ZCCKJDcBLIn4sih9l' },
@@ -53,15 +53,15 @@ const playlists = {
 		{ titulo: 'Rendido Estou', artista: 'Aline Barros', capaUrl: 'https://picsum.photos/seed/deuse7/200/200', spotifyUrl: 'https://open.spotify.com/search/Rendido%20Estou' }
 	],
 	'trap': [
-		{ titulo: 'Rainha da Finesse', artista: 'WIU', capaUrl: 'https://picsum.photos/seed/trap1/200/200', spotifyUrl: 'https://open.spotify.com/search/Rainha%20da%20Finesse' },
-		{ titulo: 'Anos Luz', artista: 'Matue', capaUrl: 'https://picsum.photos/seed/trap2/200/200', spotifyUrl: 'https://open.spotify.com/search/Anos%20Luz' },
-		{ titulo: 'Vidigal', artista: 'WIU', capaUrl: 'https://picsum.photos/seed/trap3/200/200', spotifyUrl: 'https://open.spotify.com/search/Vidigal' },
+		{ titulo: 'Rainha da Finesse', artista: 'WIU', capaUrl: 'https://picsum.photos/seed/trap1/200/200', spotifyUrl: 'https://open.spotify.com/intl-pt/track/0w7vodPWFEcuEYvWpbNbOu' },
+		{ titulo: 'Anos Luz', artista: 'Matue', capaUrl: 'https://picsum.photos/seed/trap2/200/200', spotifyUrl: 'https://open.spotify.com/intl-pt/track/4hVTpP7CV9imY9U53p45sX' },
+		{ titulo: 'Vidigal', artista: 'WIU', capaUrl: 'https://picsum.photos/seed/trap3/200/200', spotifyUrl: 'https://open.spotify.com/intl-pt/track/42XLOKRo2bv2Ne9lTOGSQA' },
 		{ titulo: 'A Última Dança', artista: 'Matue', capaUrl: 'https://picsum.photos/seed/trap4/200/200', spotifyUrl: 'https://open.spotify.com/intl-pt/track/6ifISefylcgPQksE0gmcVY' },
-		{ titulo: 'Crack com Mussilon', artista: 'Matue', capaUrl: 'https://picsum.photos/seed/trap5/200/200', spotifyUrl: 'https://open.spotify.com/search/Crack%20com%20Mussilon' },
+		{ titulo: 'Crack com Mussilon', artista: 'Matue', capaUrl: 'https://picsum.photos/seed/trap5/200/200', spotifyUrl: 'https://open.spotify.com/intl-pt/track/4ssHL7bSnOAE7HjiuLx6Co' },
 		{ titulo: 'Tá Tarde', artista: 'Vulgo FK', capaUrl: 'https://picsum.photos/seed/trap6/200/200', spotifyUrl: 'https://open.spotify.com/intl-pt/track/7DWAerOfnQXuvH84B4kx53' },
-		{ titulo: 'Plug da Nova', artista: 'Veigh', capaUrl: 'https://picsum.photos/seed/trap7/200/200', spotifyUrl: 'https://open.spotify.com/search/Plug%20da%20Nova' },
-		{ titulo: 'Artista Genérico', artista: 'Veigh', capaUrl: 'https://picsum.photos/seed/trap8/200/200', spotifyUrl: 'https://open.spotify.com/search/Artista%20Generico' },
-		{ titulo: 'Eu Fiz o Jogo Virar', artista: 'MC Poze do Rodo', capaUrl: 'https://picsum.photos/seed/trap9/200/200', spotifyUrl: 'https://open.spotify.com/search/Eu%20Fiz%20o%20Jogo%20Virar' }
+		{ titulo: 'Plug da Nova', artista: 'Veigh', capaUrl: 'https://picsum.photos/seed/trap7/200/200', spotifyUrl: 'https://open.spotify.com/intl-pt/track/7tFHqw01PJ16Q7KBWzSDdT' },
+		{ titulo: 'Artista Genérico', artista: 'Veigh', capaUrl: 'https://picsum.photos/seed/trap8/200/200', spotifyUrl: 'https://open.spotify.com/intl-pt/track/7yRlmQTjZ5pdtlq7ska9mj' },
+		{ titulo: 'Eu Fiz o Jogo Virar', artista: 'MC Poze do Rodo', capaUrl: 'https://picsum.photos/seed/trap9/200/200', spotifyUrl: 'https://open.spotify.com/intl-pt/track/53BkPZwlaLbW77uV9BnJkl' }
 	]
 };
 
